@@ -61,7 +61,7 @@
                 <h2>Game log</h2>
                 <div class="game-log">
                     <ul>
-                        <li v-for="log in gameLog" >
+                        <li v-for="log in log" >
                             <span class="log red" v-if="log.actionTaken == 'attacked'">The {{ log.entity }} attacked the Player, dealing {{ log.actionValue }} damage.</span >
                             <span class="log green" v-if="log.actionTaken == 'attack'">The {{ log.entity }} attacked the Monster, dealing {{ log.actionValue }} damage.</span >
                             <span class="log yellow" v-if="log.actionTaken == 'specialAttack'">The {{ log.entity }} launched a Special Attack on the Monster, dealing {{ log.actionValue }} damage.</span >
