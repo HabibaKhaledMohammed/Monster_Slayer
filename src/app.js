@@ -59,16 +59,22 @@ new Vue({
   },
   computed: {
     healsUsed: function() {
-     
+        return 3- this.healCount;
     }
   },
   watch: {
     monsterHealth: function() {
-      
+       if(this.monsterHealth<=0){
+        this.monsterHealth=0;
+        this.showNewGameControls=true;
+      }
     }
     ,
     playerHealth: function() {
-     
+     if(this.playerHealth<=0){
+        this.playerHealth=0;
+        this.showNewGameControls=true;
+      }
     }
   },
 })
